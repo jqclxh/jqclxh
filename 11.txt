@@ -1,0 +1,42 @@
+使用模型得问题：
+如果不启用自动时间戳  查询出来的日期格式是什么样的
+模型中 $_server 报错不存在变量,  $_SERVER['REMOTE_ADDR']  数组名称与键名称都要大写
+增删改查 哪些方法可以直接调用 create  insertall()saveall
+模型自定义方法外部调用 老是报不能静态调用，必须实例化吗？
+外部调用的时候得定义为static ，但是静态函数里使用的变量必须是静态变量；静态函数只能使用静态变量，静态函数和变量 , 引用是通过 self::函数名() 和 self::变量名；
+
+任何时候静态属性引用都是 self 、非静态属性引用都是this
+
+静态方法中只能用self访问静态属性、静态方法，不能使用this；
+
+正则方法中 self与this都可以引用静态方法与非静态方法
+
+self的用途 
+	替代类名，引用当前类的静态成员变量和静态函数； 
+	抑制多态行为，引用当前类的函数而非子类中覆盖的实现；
+
+
+关联模型怎么用？
+
+Db输出的是数组、模型输出的是对象？
+
+验证问题：
+不能继承facade
+new \app\index\validate\User   不是 new app\index\validate\User
+
+其他：
+initialize是controller方法
+session必须设置前缀吗
+
+self与this
+	self能调用非静态方法吗self::verifyLogin();
+
+
+数据库连接 3306
+
+不支持: redis  : 安装php扩展项
+
+
+需求：
+商品列表、场景设置、场景商品、场景订单
+
